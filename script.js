@@ -1,76 +1,58 @@
-const year = document.querySelector("#year");
+const year = document.querySelector('#year');
+if (year) year.textContent = new Date().getFullYear();
 
-if (year) {
-  year.textContent = new Date().getFullYear();
+const progress = document.querySelector('.progress');
+const links = [...document.querySelectorAll('nav a')];
+const sections = links.map((link) => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+
+function updateNavigation() {
+  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+  progress.style.width = `${maxScroll > 0 ? (window.scrollY / maxScroll) * 100 : 0}%`;
+  const current = [...sections].reverse().find((section) => section.offsetTop <= window.scrollY + 120);
+  links.forEach((link) => link.classList.toggle('active', link.getAttribute('href') === `#${current?.id || 'home'}`));
 }
 
-const header = document.querySelector(".site-header");
-const progress = document.querySelector(".scroll-progress");
-const navLinks = Array.from(document.querySelectorAll(".nav-links a"));
-const sections = navLinks
-  .map((link) => document.querySelector(link.getAttribute("href")))
-  .filter(Boolean);
-
-const updateChrome = () => {
-  const scrollTop = window.scrollY;
-  const pageHeight = document.documentElement.scrollHeight - window.innerHeight;
-  const progressValue = pageHeight > 0 ? (scrollTop / pageHeight) * 100 : 0;
-
-  if (progress) {
-    progress.style.width = `${Math.min(progressValue, 100)}%`;
-  }
-
-  if (header) {
-    header.classList.toggle("is-scrolled", scrollTop > 12);
-  }
-
-  document.body.classList.toggle("is-scrolled", scrollTop > 12);
-
-  const activeSection = sections
-    .slice()
-    .reverse()
-    .find((section) => section.offsetTop <= scrollTop + 140);
-  const activeHref = activeSection ? `#${activeSection.id}` : "#work";
-
-  navLinks.forEach((link) => {
-    link.classList.toggle("is-active", link.getAttribute("href") === activeHref);
-  });
-};
-
-const revealItems = document.querySelectorAll(".reveal");
-
-if ("IntersectionObserver" in window) {
-  const revealObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.14 },
-  );
-
+const revealItems = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.12 });
   revealItems.forEach((item, index) => {
-    item.style.transitionDelay = `${Math.min(index * 45, 220)}ms`;
-    revealObserver.observe(item);
+    item.style.transitionDelay = `${Math.min(index * 35, 180)}ms`;
+    observer.observe(item);
   });
 } else {
-  revealItems.forEach((item) => item.classList.add("is-visible"));
+  revealItems.forEach((item) => item.classList.add('visible'));
 }
 
-updateChrome();
-window.addEventListener("scroll", updateChrome, { passive: true });
+window.addEventListener('scroll', updateNavigation, { passive: true });
+updateNavigation();
 
-const updatePointerBackground = (event) => {
-  const x = event.clientX - window.innerWidth / 2;
-  const y = event.clientY - window.innerHeight / 2;
-
-  document.body.style.setProperty("--mx", `${x}px`);
-  document.body.style.setProperty("--my", `${y}px`);
-};
-
-if (window.matchMedia("(pointer: fine)").matches) {
-  window.addEventListener("pointermove", updatePointerBackground, { passive: true });
-}
+document.querySelectorAll('.kinetic-title').forEach((title) => {
+  const walker = document.createTreeWalker(title, NodeFilter.SHOW_TEXT);
+  const textNodes = [];
+  let node;
+  while ((node = walker.nextNode())) textNodes.push(node);
+  let wordIndex = 0;
+  textNodes.forEach((textNode) => {
+    const fragment = document.createDocumentFragment();
+    textNode.textContent.split(/(\s+)/).forEach((part) => {
+      if (!part) return;
+      if (/^\s+$/.test(part)) {
+        fragment.append(part);
+        return;
+      }
+      const word = document.createElement('span');
+      word.className = 'kinetic-word';
+      word.style.setProperty('--word-index', wordIndex);
+      word.textContent = part;
+      wordIndex += 1;
+      fragment.append(word);
+    });
+    textNode.replaceWith(fragment);
+  });
+});

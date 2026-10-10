@@ -1,366 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Portfolio of Prateek Gupta, a Computer Science Engineering student building Python, Java, and frontend projects."
-    />
-    <title>Prateek Gupta | Portfolio</title>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="scroll-progress" aria-hidden="true"></div>
-    <header class="site-header">
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#work">Work</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Prateek Gupta - Computer Science Engineering student and developer.">
+  <title>Prateek Gupta | Portfolio</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="enhancements.css">
+  <link rel="stylesheet" href="hero-details.css">
+</head>
+<body>
+  <div class="progress" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div><div class="cursor-ring" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="wordmark" href="#home">Prateek Gupta<span>.</span></a>
+    <nav aria-label="Main navigation"><a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a></nav>
+    <a class="hire" href="#contact">Hire me <span>&#8599;</span></a>
+  </header>
 
-    <main id="top">
-      <section class="hero section-band">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">Computer Science Engineering student</p>
-          <h1>Turning abstract ideas into software that is well-architected, functional, and alive...</h1>
-          <p class="hero-lede">
-            I am a B.Tech CSE student at VIT Vellore with hands-on work in
-            machine learning prototypes, console tools, frontend interfaces,
-            and software engineering simulations.
-          </p>
-          <div class="hero-highlights" aria-label="Portfolio highlights">
-            <span>Python developer intern</span>
-            <span>9.18 CGPA</span>
-            <span>Google Student Ambassador 2026</span>
-          </div>
-          <div class="status-line">
-            <span class="status-dot"></span>
-            Available for meaningful connections and creative collaborations
-          </div>
-        </div>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-copy reveal">
+        <p class="hero-label"><span>Computer Science Engineering</span><i></i><span>VIT Vellore</span><i></i><span>9.18 CGPA</span></p>
+        <h1 class="kinetic-title visible">Turning abstract ideas<br>into <span>software that matters.</span></h1>
+        <p>I am a Computer Science Engineering student at VIT Vellore, working across Python, Java, web interfaces, and practical software systems.</p>
+        <div class="hero-actions"><a class="button dark" href="#projects">View my work <span>&#8595;</span></a><a class="button dark" href="#contact">Contact me</a><a class="resume-link" href="assets/prateek-gupta-resume.pdf" download>Download resume <span>&#8595;</span></a></div>
+      </div>
+      <div class="portrait-cutout reveal" aria-label="Portrait of Prateek Gupta"><div class="portrait-halo"></div><img src="assets/linkedin-profile.png" alt="Prateek Gupta"><div class="portrait-note"><span>VIT Vellore</span><strong>CSE / 2028</strong></div></div>
+      <div class="hero-stamp reveal"><span>Soft skills</span><strong>Leadership<br>Communication<br>Teamwork<br>Problem solving</strong></div>
+      <div class="hero-scroll"><span></span> Scroll to explore</div>
+    </section>
 
-        <aside class="hero-art reveal" aria-label="Profile details">
-          <span class="ribbon ribbon-one"></span>
-          <span class="ribbon ribbon-two"></span>
-          <span class="ribbon ribbon-three"></span>
-          <div class="profile-photo-card">
-            <a
-              class="profile-photo-link"
-              href="https://www.linkedin.com/in/prateek-gupta-a39483316/"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Open Prateek Gupta LinkedIn profile"
-            >
-              <span class="profile-ring" aria-hidden="true">
-                <img
-                  src="assets/linkedin-profile.png"
-                  alt=""
-                  aria-hidden="true"
-                />
-              </span>
-            </a>
-            <div class="name-tag">
-              <span>Prateek Gupta</span>
-            </div>
-          </div>
-          <div class="profile-json-card" aria-label="Profile summary in JSON format">
-            <div class="json-dots" aria-hidden="true">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <pre><code>{
-  "name": "Prateek Gupta",
-  "role": "Computer Science Engineering Student",
-  "currently": "B.Tech CSE",
-  "school": "VIT Vellore",
-  "cgpa": 9.18,
-  "expectedGraduation": 2028,
-  "snapshot": {
-    "publicProjects": 5,
-    "internshipBuilds": 3,
-    "coreLanguages": 4
-  },
-  "status": "Ready to connect"
-}</code></pre>
-          </div>
-        </aside>
-      </section>
+    <section class="about section" id="about">
+      <div class="curve curve-top" aria-hidden="true"></div>
+      <div class="section-heading reveal"><p class="label">01 / About</p><h2>Building with<br><em>clarity and care.</em></h2></div>
+      <div class="about-text reveal"><p>I like beginning with the real problem, not just the feature list. That means understanding the workflow, designing the structure, and writing the smallest useful solution.</p><p>My learning has included Python applications, frontend work, predictive modeling, and software-engineering simulations. I am especially interested in projects that make everyday work simpler.</p></div>
+    </section>
 
-      <section class="snapshot reveal">
-        <div>
-          <p class="section-kicker">Focus</p>
-          <h2>Software that turns learning into working products.</h2>
-        </div>
-        <p>
-          My recent work spans AI-assisted testing concepts, carbon-awareness
-          interfaces, predictive modeling, data-structure practice, and
-          frontend component customization through industry simulations.
-        </p>
-      </section>
+    <section class="process section">
+      <div class="section-heading reveal"><p class="label">02 / Process</p><h2>From early thought<br>to <em>working software.</em></h2></div>
+      <div class="process-grid process-stack">
+        <article class="process-card tilted reveal"><span>01</span><h3>Research</h3><p>Understand requirements, people, constraints, and the shape of the system before building.</p></article>
+        <article class="process-card red-card reveal"><span>02</span><h3>Design</h3><p>Plan architecture, data, interface flow, and technical decisions with intent.</p></article>
+        <article class="process-card tilted-back reveal"><span>03</span><h3>Develop</h3><p>Write clear code, connect the right parts, and test the details that matter.</p></article>
+        <article class="process-card dark-card reveal"><span>04</span><h3>Deploy</h3><p>Package the work, track changes, and make the next iteration easier to ship.</p></article>
+      </div>
+    </section>
 
-      <section class="proof-grid reveal" aria-label="Portfolio proof points">
-        <article>
-          <span>Internship</span>
-          <h3>Python Developer Intern</h3>
-          <p>Built ML, matrix, and assistant projects during remote internship work.</p>
-        </article>
-        <article>
-          <span>Simulations</span>
-          <h3>Walmart, Skyscanner, JPMorgan</h3>
-          <p>Practiced software engineering workflows through industry programs.</p>
-        </article>
-        <article>
-          <span>Campus</span>
-          <h3>VIT Vellore CSE</h3>
-          <p>9.18 CGPA with active technical learning and community participation.</p>
-        </article>
-      </section>
+    <section class="skills section" id="skills">
+      <div class="section-heading reveal"><p class="label">03 / Technical skillset</p><h2>Tools I use to<br><em>make things work.</em></h2></div>
+      <div class="skills-list">
+        <article class="skill-row reveal"><span>01</span><h3>Programming languages</h3><div><b>Java</b><b>C++</b><b>Python</b><b>JavaScript</b></div></article>
+        <article class="skill-row reveal"><span>02</span><h3>Full stack &amp; backend</h3><div><b>HTML / CSS</b><b>React</b><b>Node.js</b><b>Express</b><b>Spring Boot</b><b>REST APIs</b></div></article>
+        <article class="skill-row reveal"><span>03</span><h3>Data &amp; storage</h3><div><b>MongoDB</b><b>MySQL</b><b>Firebase</b><b>SQL</b></div></article>
+        <article class="skill-row reveal"><span>04</span><h3>Tools &amp; foundations</h3><div><b>Git</b><b>GitHub</b><b>Postman</b><b>Docker</b><b>Data Structures</b><b>OOP</b></div></article>
+      </div>
+    </section>
 
-      <section class="tech-strip reveal" aria-label="Technology stack">
-        <div class="marquee-track">
-          <span>Python</span>
-          <span>Java</span>
-          <span>JavaScript</span>
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>SQL</span>
-          <span>NumPy</span>
-          <span>Scikit-learn</span>
-          <span>Responsive UI</span>
-          <span>Data Structures</span>
-        </div>
-        <div class="marquee-track" aria-hidden="true">
-          <span>Python</span>
-          <span>Java</span>
-          <span>JavaScript</span>
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>SQL</span>
-          <span>NumPy</span>
-          <span>Scikit-learn</span>
-          <span>Responsive UI</span>
-          <span>Data Structures</span>
-        </div>
-      </section>
+    <section class="projects section" id="projects">
+      <div class="section-heading reveal"><p class="label">04 / Featured projects</p><h2>Work I have<br><em>actually built.</em></h2></div>
+      <div class="project-list">
+        <article class="featured-project reveal"><div class="project-art"><div class="art-header"><i></i><i></i><i></i><span>contact_manager.py</span></div><div class="art-contacts"><div><strong>CL</strong><span>Client records</span><b>JSON</b></div><div><strong>VN</strong><span>Vendor records</span><b>CSV</b></div><div><strong>CRUD</strong><span>Contact workflow</span><b>&#8599;</b></div></div><code>manage_contacts()</code></div><div class="project-body"><span class="project-count">01 / Python</span><h3>Client &amp; Vendor Contact Management System</h3><p>Console application for managing business contacts with search, category filters, JSON storage, and CSV export.</p><ul><li>Add, view, update, and delete contact records</li><li>Filter Client, Vendor, and Partner categories</li><li>Dashboard summary counts by category</li></ul><a href="https://github.com/prateekg-06/CmanageV" target="_blank" rel="noreferrer">View repository <span>&#8599;</span></a></div></article>
+        <article class="featured-project reveal"><div class="project-art"><div class="art-header"><i></i><i></i><i></i><span>appointment_api.py</span></div><div class="art-contacts"><div><strong>30</strong><span>Minute time slots</span><b>LIVE</b></div><div><strong>409</strong><span>Conflict protection</span><b>SQL</b></div><div><strong>API</strong><span>Provider schedule</span><b>&#8599;</b></div></div><code>book_appointment()</code></div><div class="project-body"><span class="project-count">02 / Python, Flask, SQLite</span><h3>my-slot</h3><p>Appointment scheduling platform with live availability, duplicate-booking prevention, customer history, and provider schedules.</p><ul><li>Customer booking flow with 30-minute slots</li><li>SQLite constraints prevent duplicate bookings</li><li>REST endpoints for availability, booking, and cancellation</li></ul><a href="https://github.com/prateekg-06/myslot" target="_blank" rel="noreferrer">View repository <span>&#8599;</span></a></div></article>
+        <article class="featured-project reveal"><div class="project-art"><div class="art-header"><i></i><i></i><i></i><span>risk_engine.py</span></div><div class="art-contacts"><div><strong>52</strong><span>Deterministic score</span><b>HIGH</b></div><div><strong>4</strong><span>Ranked test plans</span><b>TEST</b></div><div><strong>AI</strong><span>Evidence explanation</span><b>&#8599;</b></div></div><code>analyze_change()</code></div><div class="project-body"><span class="project-count">03 / Next.js, FastAPI</span><h3>ImpactLens AI</h3><p>Evidence-backed test-planning prototype that analyzes change impact and ranks targeted test recommendations.</p><ul><li>Deterministic risk scoring before AI explanation</li><li>Dependency context and evidence chains</li><li>Frontend dashboard with FastAPI backend</li></ul><a href="https://github.com/prateekg-06/impact-lenshack" target="_blank" rel="noreferrer">View repository <span>&#8599;</span></a></div></article>
+        <article class="featured-project reveal"><div class="project-art"><div class="art-header"><i></i><i></i><i></i><span>equivalents.js</span></div><div class="art-contacts"><div><strong>CO2</strong><span>Interactive slider</span><b>0-50</b></div><div><strong>11</strong><span>Conversion factors</span><b>DATA</b></div><div><strong>UI</strong><span>Category filters</span><b>&#8599;</b></div></div><code>calculate_equivalents()</code></div><div class="project-body"><span class="project-count">04 / HTML, CSS, JavaScript</span><h3>EcoPulse</h3><p>Carbon-footprint awareness app that makes CO2 values relatable through real-world daily-life equivalents.</p><ul><li>Real-time interactive CO2 slider</li><li>Travel, food, energy, product, and tree categories</li><li>Single-file static application with no dependencies</li></ul><a href="https://github.com/prateekg-06/ecopulse-equivalents-engine" target="_blank" rel="noreferrer">View repository <span>&#8599;</span></a></div></article>
+      </div>
+    </section>
 
-      <section id="work" class="section">
-        <div class="section-heading reveal">
-          <p class="section-kicker">Selected work</p>
-          <h2>Projects from hands-on practice and resume work</h2>
-        </div>
+    <section class="experience section">
+      <div class="section-heading reveal"><p class="label">05 / Experience</p><h2>Learning by<br><em>building and leading.</em></h2></div>
+      <div class="timeline">
+        <article class="reveal"><span>2026</span><div><p>Python Developer Intern / QSkill</p><h3>Built internship projects involving predictive modeling, voice assistance, and matrix operations.</h3></div></article>
+        <article class="reveal"><span>2026</span><div><p>Google Student Ambassador</p><h3>Participating in campus communities, technical discussions, and student opportunities. <img class="google-logo" src="assets/google-g.png" alt="Google"></h3></div></article>
+        <article class="reveal"><span>Ongoing</span><div><p>Software engineering simulations</p><h3>Practicing data structures, system diagrams, frontend components, testing, and event-driven patterns.</h3></div></article>
+      </div>
+    </section>
 
-        <div class="projects-stack">
-          <div class="project-grid">
-            <article class="project-card reveal">
-              <div class="project-topline">
-                <span class="tag">Python</span>
-                <span>Priority project</span>
-              </div>
-              <span class="project-index">01</span>
-              <h3>Client and Vendor Contact Management System</h3>
-              <p>
-                A Python console application for organizing business contacts
-                in one place. It supports separate client and vendor records,
-                fast lookup, category-based filtering, CSV export, and a
-                dashboard-style summary for quick review.
-              </p>
-              <ul class="project-points">
-                <li>Full CRUD flows for adding, viewing, updating, and deleting contacts.</li>
-                <li>Validated contact model with unique ID generation.</li>
-                <li>Keyword search, category filters, and clean menu-driven navigation.</li>
-                <li>CSV export so contact data can be reused outside the app.</li>
-              </ul>
-              <div class="project-meta">
-                <span>Console app</span>
-                <span>Data validation</span>
-                <span>CSV workflow</span>
-              </div>
-            </article>
+    <section class="traits section"><p class="label reveal">06 / Strengths</p><div class="trait-grid"><span class="reveal">Leadership</span><span class="reveal">Public speaking</span><span class="reveal">Teamwork</span><span class="reveal">Communication</span><span class="reveal">Problem solving</span><span class="reveal">Adaptability</span><span class="reveal">Creativity</span><span class="reveal">Time management</span></div></section>
 
-            <article class="project-card reveal">
-              <div class="project-topline">
-                <span class="tag">Python / Testing</span>
-                <span>Project build</span>
-              </div>
-              <span class="project-index">02</span>
-              <h3>ImpactLens AI</h3>
-              <p>
-                Evidence-backed test planning platform that turns code changes
-                into ranked risk reports using code relationships, historical
-                context, deterministic scoring, and AI explanations.
-              </p>
-              <ul class="project-points">
-                <li>Ranks recommended tests instead of suggesting the whole suite.</li>
-                <li>Uses deterministic risk scoring before AI explains the result.</li>
-                <li>Surfaces hidden dependencies that line-diff reviews can miss.</li>
-              </ul>
-              <div class="project-meta">
-                <span>Risk scoring</span>
-                <span>AI explainability</span>
-              </div>
-            </article>
-
-            <article class="project-card reveal">
-              <div class="project-topline">
-                <span class="tag">HTML / CSS / JS</span>
-                <span>Project build</span>
-              </div>
-              <span class="project-index">03</span>
-              <h3>EcoPulse Equivalents Engine</h3>
-              <p>
-                Carbon-footprint awareness app that translates CO2 values into
-                relatable real-world comparisons across travel, food, energy,
-                products, and tree absorption.
-              </p>
-              <ul class="project-points">
-                <li>Interactive CO2 slider updates equivalents in real time.</li>
-                <li>Category filters make the same footprint easier to understand.</li>
-                <li>Zero-dependency static HTML, CSS, and JavaScript build.</li>
-              </ul>
-              <div class="project-meta">
-                <span>Static app</span>
-                <span>Interactive UI</span>
-              </div>
-            </article>
-
-            <article class="project-card reveal">
-              <div class="project-topline">
-                <span class="tag">Python / ML</span>
-                <span>Internship work</span>
-              </div>
-              <span class="project-index">04</span>
-              <h3>Python Internship Mini-Projects</h3>
-              <p>
-                Three standalone internship builds covering predictive modeling,
-                matrix computation, and a voice-activated assistant with speech
-                recognition and API integrations.
-              </p>
-              <ul class="project-points">
-                <li>Compared regression models for housing price prediction.</li>
-                <li>Built matrix arithmetic and linear algebra operations with NumPy.</li>
-                <li>Created text and voice assistant modes for practical commands.</li>
-              </ul>
-              <div class="project-meta">
-                <span>ML</span>
-                <span>NumPy</span>
-                <span>Voice assistant</span>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="skills" class="section split-section">
-        <div class="section-heading reveal">
-          <p class="section-kicker">Toolkit</p>
-          <h2>Technical skills</h2>
-          <div class="skill-cloud" aria-label="Skill highlights">
-            <span>Python</span>
-            <span>Java</span>
-            <span>JavaScript</span>
-            <span>SQL</span>
-            <span>Git</span>
-            <span>Scikit-learn</span>
-          </div>
-        </div>
-        <div class="skill-columns">
-          <div class="reveal">
-            <h3>Languages</h3>
-            <p>Python, Java, JavaScript, C, C++</p>
-          </div>
-          <div class="reveal">
-            <h3>Frontend</h3>
-            <p>HTML, CSS, responsive layouts, interactive UI components</p>
-          </div>
-          <div class="reveal">
-            <h3>Software foundations</h3>
-            <p>Data structures, object-oriented programming, SQL, Git, GitHub</p>
-          </div>
-          <div class="reveal">
-            <h3>Python ecosystem</h3>
-            <p>Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="experience" class="section timeline-section">
-        <div class="section-heading reveal">
-          <p class="section-kicker">Experience</p>
-          <h2>Internship and simulations</h2>
-        </div>
-        <div class="timeline">
-          <article class="reveal">
-            <span class="time">Jun 2026 - Jul 2026</span>
-            <h3>Python Developer Intern, QSkill</h3>
-            <p>
-              Built Python applications covering predictive modeling, voice
-              automation, and matrix computation while strengthening debugging,
-              data preprocessing, and remote collaboration skills.
-            </p>
-          </article>
-          <article class="reveal">
-            <span class="time">Software engineering simulations</span>
-            <h3>Walmart, Skyscanner, and JPMorgan Chase</h3>
-            <p>
-              Practiced heap-based data structures, system diagrams, frontend
-              components, automated testing, and event-driven Java microservice
-              patterns through virtual experience programs.
-            </p>
-          </article>
-          <article class="reveal">
-            <span class="time">Leadership</span>
-            <h3>Google Student Ambassador 2026</h3>
-            <p>
-              Active in technical communities, hackathons, learning milestones,
-              and self-directed exploration across AI, cybersecurity, and
-              software development.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section id="contact" class="contact-section reveal">
-        <div>
-          <p class="section-kicker">Contact</p>
-          <h2>Let us build something useful.</h2>
-          <p>
-            I am available for meaningful technical conversations, project
-            collaborations, and opportunities where I can keep growing as a
-            software engineer.
-          </p>
-        </div>
-        <div class="contact-actions">
-          <a class="button primary" href="mailto:guptaprateek0610@gmail.com"
-            >Email me</a
-          >
-          <a
-            class="button secondary"
-            href="https://github.com/prateekg-06?tab=repositories"
-            target="_blank"
-            rel="noreferrer"
-            >GitHub repos</a
-          >
-          <a
-            class="button secondary"
-            href="https://www.linkedin.com/in/prateek-gupta-a39483316/"
-            target="_blank"
-            rel="noreferrer"
-            >LinkedIn profile</a
-          >
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <p>© <span id="year"></span> Prateek Gupta.</p>
-      <a href="#top">Back to top</a>
-    </footer>
-
-    <script src="script.js"></script>
-  </body>
+    <section class="contact" id="contact">
+      <div class="contact-bg" aria-hidden="true">CONTACT</div>
+      <div class="contact-copy reveal"><p class="label">07 / Contact</p><h2>Let’s make something<br><em>worth using.</em></h2><p>For projects, collaborations, or a straightforward technical conversation, get in touch.</p><div class="contact-socials"><a href="https://github.com/prateekg-06" target="_blank" rel="noreferrer">GitHub <span>&#8599;</span></a><a href="https://www.linkedin.com/in/prateek-gupta-a39483316/" target="_blank" rel="noreferrer">LinkedIn <span>&#8599;</span></a><a href="mailto:guptaprateek0610@gmail.com">Email <span>&#8599;</span></a></div></div>
+      <form class="contact-form reveal" action="mailto:guptaprateek0610@gmail.com" method="post" enctype="text/plain"><label>First name<input type="text" name="first_name" placeholder="First name" required></label><label>Last name<input type="text" name="last_name" placeholder="Last name"></label><label class="wide">Email<input type="email" name="email" placeholder="you@example.com" required></label><label class="wide">Message<textarea name="message" rows="5" placeholder="Tell me a little about your idea..." required></textarea></label><button class="button red" type="submit">Send message <span>&#8599;</span></button></form>
+    </section>
+  </main>
+  <footer><a class="wordmark" href="#home">Prateek Gupta<span>.</span></a><p>© <span id="year"></span> Prateek Gupta. Built with care.</p><a href="#home">Back to top &#8593;</a></footer>
+  <script src="script.js"></script>
+  <script src="cursor.js"></script>
+</body>
 </html>
